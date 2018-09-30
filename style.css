@@ -1,0 +1,183 @@
+/* My imports */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*, *:before, *after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My own code */
+/* ----------- */
+
+/* Font Style */
+
+h1, h2, h3, h4, h5, h6, a, p, inpt, label{
+    font-family:'Poppins', sans-serif;
+}
+
+h1{
+    font-size : 2.6em;
+}
+h2{
+    font-size : 2em;
+}
+h3{
+    font-size : 1.6em;
+}
+h4{
+    font-size : 1.5em;
+}
+
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Our Navigation */
+
+nav{
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(0, 183, 255);
+    padding: 10px 0 10px 0; /* All 4 sides of the paddable possibilities should be mentioned. When not needed use zero. 
+                                Else when omitted, it takes default*/
+}
+/* This is where the magic happened. justify-content made these links go horizontal. */
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    font-size:1.4em;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: rgb(255, 216, 0);
+    text-decoration: underline rgb(255, 216, 0) wavy;
+}
+
+/* #myimg - This is using class id instead of below*/
+nav ul li img{
+    height: 6vh;
+    align-self: flex-start;
+}
+
+nav ul li img:hover{
+    filter: brightness(150%);
+    transform-origin: center top;
+    transform: scale(1.4) translateY(10px);
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+/* Our Header */
+
+header{
+    background: url(bg.jpg);
+    /*background-size:cover;   */ 
+    width: 100vw;
+    height: 80vh;
+    background-color: blueviolet;
+    display: flex;
+    align-items: flex-end;    /* Used for vertical axis X */
+    justify-content: center; /* Used for horizontal axis Y */
+}
+
+header div{
+    background-color: rgba(0, 183, 255, 0.45);    
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: white;
+}
+
+header i{
+    font-size: 3.4em;
+    color: rgb(255, 216, 0);
+    display: block;
+}
+header i:hover{
+    color: rgb(255, 229, 85);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+/* Our Brand Section */
+
+section#brand{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section#brand section{
+    padding: 15px;
+    border-radius: 5px;
+    width:  25%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+section#brand section i{
+    font-size: 5em;
+    color: rgb(0, 183, 255);
+}
